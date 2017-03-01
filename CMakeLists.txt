@@ -20,7 +20,7 @@ set(luasrc
   safe.lua
 )
 
-ADD_LIBRARY(threadsmain MODULE lib/thread-main.c)
+ADD_LIBRARY(threadsmain SHARED lib/thread-main.c)
 IF(APPLE)
   SET_TARGET_PROPERTIES(threadsmain PROPERTIES
     LINK_FLAGS "-undefined dynamic_lookup")
